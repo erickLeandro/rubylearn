@@ -1,0 +1,19 @@
+<h1> Agenda de eventos </h1>
+
+<h2> <%= link_to 'Novo', new_tag_path() %> </h2>
+
+<table> 
+    <thead>
+        <th>Nome</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+    </thead>
+    <tbody>
+        <% @tags.each do |tag| %>
+        <tr>
+            <td><%= tag.name %> </td>
+            <td><%= link_to 'Editar', edit_tag_path(tag) %></td>
+        </tr>
+        <% end %>
+    </tbody>    
+</table>
